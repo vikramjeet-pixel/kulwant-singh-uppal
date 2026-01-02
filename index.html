@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official website for Councillor Kulwant Singh Uppal, Labour Party representative for Wednesbury South in Sandwell. Get help, report issues, and find surgery details.">
+    <title>Councillor Kulwant Singh Uppal | Wednesbury South & Sandwell</title>
+    
+    <!-- Google Fonts: Inter for readability and modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS Variables & Reset --- */
+        :root {
+            /* Labour Party Red Palette & Neutrals */
+            --primary-red: #e4003b; 
+            --primary-dark: #b0002e;
+            --primary-light: #fff0f3;
+            
+            --text-dark: #1f2937;
+            --text-grey: #4b5563;
+            --text-light: #9ca3af;
+            
+            --bg-white: #ffffff;
+            --bg-off-white: #f9fafb;
+            --bg-grey: #e5e7eb;
+            
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            
+            --max-width: 1200px;
+            --header-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-off-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Accessibility & Typography --- */
+        h1, h2, h3, h4 {
+            color: var(--text-dark);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; color: var(--primary-dark); }
+        h3 { font-size: 1.5rem; }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* --- Utility Classes --- */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-red { color: var(--primary-red); }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-red);
+            color: var(--primary-red);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-red);
+            color: white;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: var(--bg-white);
+            height: var(--header-height);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: var(--text-grey);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-grey);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-red);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-red);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            isolation: isolate;
+            color: white;
+            padding: 120px 0 100px;
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+            overflow: hidden;
+        }
+
+        .hero-bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* --- Quick Links --- */
+        .quick-links {
+            transform: translateY(-50px);
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .link-card {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            height: 100%;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-bottom: 4px solid var(--primary-red);
+        }
+
+        .link-card i {
+            font-size: 2rem;
+            color: var(--primary-red);
+        }
+
+        .link-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0;
+        }
+
+        .link-card p {
+            color: var(--text-grey);
+            font-size: 0.9rem;
+        }
+
+        /* --- About Section --- */
+        .about-section {
+            background-color: var(--bg-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            object-fit: cover;
+            height: 500px;
+        }
+
+        .highlight-box {
+            background-color: var(--primary-light);
+            border-left: 4px solid var(--primary-red);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        /* --- Warding & Priorities --- */
+        .priorities-section {
+            background-color: var(--bg-off-white);
+        }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .priorities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .priority-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--primary-red);
+        }
+
+        .priority-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- Blog/News --- */
+        .news-section {
+            background-color: var(--bg-white);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .news-item {
+            border: 1px solid var(--bg-grey);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: var(--primary-red);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* --- Contact --- */
+        .contact-section {
+            background-color: #1f2937;
+            color: white;
+        }
+
+        .contact-section h2 { color: white; }
+        .contact-section h3 { color: var(--primary-light); font-size: 1.25rem; margin-bottom: 0.5rem; }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-method {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .contact-method i {
+            color: var(--primary-red);
+            font-size: 1.25rem;
+            margin-top: 4px;
+        }
+
+        .contact-method a {
+            color: #d1d5db;
+            border-bottom: 1px dotted #d1d5db;
+        }
+        
+        .contact-method a:hover {
+            color: var(--primary-red);
+            border-bottom-color: var(--primary-red);
+        }
+
+        .video-container {
+            background-color: #374151;
+            padding: 20px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            border: 1px solid #4b5563;
+        }
+        
+        .video-container h4 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            
+            .mobile-menu-btn { display: block; }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                box-shadow: var(--shadow-md);
+                border-top: 1px solid var(--bg-grey);
+            }
+
+            nav ul.active { display: flex; }
+
+            .about-grid { grid-template-columns: 1fr; }
+            .about-image { order: -1; }
+            
+            .quick-links { transform: translateY(0); margin-top: -40px; margin-bottom: 20px; }
+            
+            .hero { padding: 100px 0 60px; text-align: center; }
+            .hero-content { margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <!-- Placeholder for Party Logo or Councillor Icon -->
+                <i class="fa-solid fa-building-columns fa-2x" style="color: var(--primary-red);"></i>
+                <div class="logo-text">
+                    Cllr Kulwant Singh Uppal
+                    <span>Wednesbury South & Sandwell</span>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#priorities">Priorities</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg-container">
+                <div class="hero-overlay"></div>
+                <img src="home.jpeg" alt="Wednesbury South" class="hero-bg-image">
+            </div>
+            <div class="container hero-content">
+                <h1>Welcome to your online hub for Wednesbury South</h1>
+                <p>As your local representative, I am committed to making our streets safer, cleaner, and healthier for every resident. Whether you need help with a local issue or want to share your views on council services, I am here to listen and act.</p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; @media(min-width:768px){justify-content: flex-start;}">
+                    <a href="#contact" class="btn btn-primary">Get In Touch <i class="fa-solid fa-envelope"></i></a>
+                    <a href="#priorities" class="btn btn-outline" style="color: white; border-color: white;">View Priorities</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Grid -->
+        <div class="container quick-links">
+            <div class="quick-links-grid">
+                <a href="#" class="link-card">
+                    <i class="fa-solid fa-trash-can"></i>
+                    <h3>Missed Bin Collection</h3>
+                    <p>Report a missed collection quickly online.</p>
+                </a>
+                <a href="#" class="link-card">
+                    <i class="fa-solid fa-road"></i>
+                    <h3>Pothole & Road Damage</h3>
+                    <p>Report hazards to keep our transit safe.</p>
+                </a>
+                <a href="#" class="link-card">
+                    <i class="fa-solid fa-box-open"></i>
+                    <h3>Fly-Tipping & Rubbish</h3>
+                    <p>Help us keep our neighborhoods clean.</p>
+                </a>
+                <a href="#" class="link-card">
+                    <i class="fa-solid fa-calendar-day"></i>
+                    <h3>Find My Bin Day</h3>
+                    <p>Check your collection schedule online.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h4 class="text-red">About Your Councillor</h4>
+                        <h2>Healthcare Expertise Meets Public Service</h2>
+                        <p>Elected in May 2023, I serve the residents of Wednesbury South with a focus on combining my professional healthcare expertise with a passion for public service.</p>
+                        
+                        <div class="highlight-box">
+                            <p>"My role on the Health and Adult Social Care Scrutiny Board allows me to ensure our local healthcare services are efficient and accessible for all Sandwell residents."</p>
+                        </div>
+
+                        <p>With a Master of Science in Medicine from Cardiff University, I have spent years working at the intersection of health and community. Before joining the Council, I served as the International Members Representative for the Faculty of Homeopathy for nearly six years, where I advocated for global healthcare standards.</p>
+                        <br>
+                        <p>Currently, I also serve as a Director at Maxwell Pain Clinic Ltd in Birmingham, focusing on improving the quality of life for those suffering from chronic pain.</p>
+                    </div>
+                    <div class="about-image">
+                        <!-- Placeholder for Councillor Photo -->
+                        <img src="uppal2.png" alt="Councillor Kulwant Singh Uppal" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warding & Priorities -->
+        <section id="priorities" class="section-padding priorities-section">
+            <div class="container">
+                <div class="intro-text">
+                    <h4 class="text-red">Dedicated Space: Wednesbury South</h4>
+                    <h2>Focusing on What Matters Most</h2>
+                    <p>In partnership with local residents and data from the Sandwell Residents Survey, my current focus areas for our ward are:</p>
+                </div>
+                
+                <div class="priorities-grid">
+                    <div class="priority-card">
+                        <h3><i class="fa-solid fa-broom text-red"></i> Cleaner Neighborhoods</h3>
+                        <p>Implementing strict measures to reduce fly-tipping and keep our streets clean. A cleaner environment improves community pride and public health.</p>
+                    </div>
+                    <div class="priority-card">
+                        <h3><i class="fa-solid fa-car-burst text-red"></i> Safer Transit</h3>
+                        <p>Working to improve highways and road safety for both motorists and pedestrians. Ensuring safe routes to schools and transport links is a priority.</p>
+                    </div>
+                    <div class="priority-card">
+                        <h3><i class="fa-solid fa-heart-pulse text-red"></i> Public Wellbeing</h3>
+                        <p>Taking proactive steps to reduce street drinking and enhance the safety of our local green spaces like Hill Top Park for families to enjoy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community News (Blog) -->
+        <section id="news" class="section-padding news-section">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 50px;">
+                    <h2>Community News & Updates</h2>
+                    <p>Latest updates from the council and the ward.</p>
+                </div>
+
+                <div class="news-grid">
+                    <article class="news-item">
+                        <img src="https://picsum.photos/seed/meeting/600/300.jpg" alt="Council Meeting" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="news-content">
+                            <span class="news-date">January 2025</span>
+                            <h3>Children’s Services Review</h3>
+                            <p>I recently participated in the Children’s Services and Education Scrutiny Board review to enhance support for young care leavers transitioning to adulthood.</p>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <img src="https://picsum.photos/seed/cleanstreet/600/300.jpg" alt="Clean Street" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="news-content">
+                            <span class="news-date">Local Success</span>
+                            <h3>Action on Fly-Tipping</h3>
+                            <p>Following reports from residents via MySandwell, we have successfully cleared three major fly-tipping sites in the ward this month.</p>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <img src="https://picsum.photos/seed/region/600/300.jpg" alt="West Midlands Map" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="news-content">
+                            <span class="news-date">Regional Advocacy</span>
+                            <h3>West Midlands Combined Authority</h3>
+                            <p>Representing Sandwell at the WMCA, I am pushing for better regional oversight on transport and housing projects.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Surgery Details -->
+        <section id="contact" class="section-padding contact-section">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Get In Touch</h2>
+                    <p style="color: #d1d5db; max-width: 600px; margin: 0 auto;">I hold regular surgeries across the ward to meet with residents face-to-face. Please check the Sandwell Council website for the latest dates and locations at Hill Top Library and other local venues.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Details -->
+                    <div>
+                        <h3>Contact Information</h3>
+                        <div class="contact-method">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <a href="mailto:KulwantSingh_Uppal@sandwell.gov.uk">KulwantSingh_Uppal@sandwell.gov.uk</a>
+                                <br>
+                                <a href="mailto:kulwant.uppal@hotmail.com">kulwant.uppal@hotmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:07974883554">07974 883 554</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Correspondence Address:</strong><br>
+                                Business and Member Services,<br>
+                                Sandwell Council House,<br>
+                                Freeth Street, Oldbury, B69 3DE.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Media Appearance -->
+                    <div class="video-container">
+                        <i class="fa-brands fa-youtube fa-3x" style="color: #ef4444; margin-bottom: 15px;"></i>
+                        <h4>Akaal Channel Appearance</h4>
+                        <p style="font-size: 0.9rem; color: #d1d5db; margin-bottom: 15px;">
+                            Councillor Uppal appearing on Akaal Channel to discuss integrated medicine.
+                        </p>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-primary" style="background-color: #ef4444;">
+                            <i class="fa-solid fa-play"></i> Watch: Homeopathy Discussion
+                        </a>
+                        <p style="font-size: 0.8rem; color: #9ca3af; margin-top: 10px;">Guests: Kulwant Uppal, Dr Helen Beaumont and Greg White</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo" style="color: white; text-align: left;">
+                <i class="fa-solid fa-building-columns"></i>
+                <div class="logo-text">
+                    Cllr Kulwant Singh Uppal
+                    <span>Labour Party Representative</span>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="https://www.sandwell.gov.uk" target="_blank">Sandwell Council</a>
+            </div>
+            <p>&copy; 2025 Councillor Kulwant Singh Uppal. All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; opacity: 0.7;">Promoted by Kulwant Uppal on behalf of himself, both at Sandwell Council House, Freeth Street, Oldbury, B69 3DE.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navList = document.querySelector('#nav-list');
+            const icon = menuBtn.querySelector('i');
+
+            menuBtn.addEventListener('click', () => {
+                navList.classList.toggle('active');
+                
+                // Toggle icon between bars and times (close)
+                if (navList.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navList.classList.remove('active');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
